@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Mirror Glyph - Reflects agent states -->
+  <defs>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#7B68EE;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Wave pattern -->
+  <path d="M 10,50 Q 25,30 40,50 T 70,50 T 100,50" 
+        stroke="url(#waveGradient)" 
+        stroke-width="3" 
+        fill="none"
+        opacity="0.8">
+    <animate attributeName="d" 
+             values="M 10,50 Q 25,30 40,50 T 70,50 T 100,50;
+                     M 10,50 Q 25,70 40,50 T 70,50 T 100,50;
+                     M 10,50 Q 25,30 40,50 T 70,50 T 100,50"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Reflection -->
+  <path d="M 10,50 Q 25,70 40,50 T 70,50 T 100,50" 
+        stroke="url(#waveGradient)" 
+        stroke-width="3" 
+        fill="none"
+        opacity="0.4"
+        transform="scale(1,-1) translate(0,-100)">
+    <animate attributeName="d" 
+             values="M 10,50 Q 25,70 40,50 T 70,50 T 100,50;
+                     M 10,50 Q 25,30 40,50 T 70,50 T 100,50;
+                     M 10,50 Q 25,70 40,50 T 70,50 T 100,50"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Resonance indicator -->
+  <circle cx="50" cy="50" r="3" fill="#fff" opacity="0.9">
+    <animate attributeName="r" 
+             values="3;6;3" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </circle>
+</svg>
