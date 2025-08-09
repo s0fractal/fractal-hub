@@ -158,7 +158,7 @@ class ${className} {
     console.log("   ${concept1} level: " + (this.state.${concept1}Level * 100).toFixed(0) + "%");
     console.log("   ${concept2} resonance: " + (this.state.${concept2}Resonance * 100).toFixed(0) + "%");
     console.log("   Pattern observed: " + this.state.pattern);
-    console.log("   \\"${this.generateWisdom(concept1, concept2)}\\"");
+    console.log(\`   "\\\${this.generateWisdom('${concept1}', '${concept2}')}"\`);
   }
   
   private generateWisdom(c1: string, c2: string): string {
