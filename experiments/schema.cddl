@@ -1,0 +1,46 @@
+; CDDL Schema for Extended CID-Thought with EDLD
+; Concise Data Definition Language for IPLD/CBOR encoding
+
+edld-thought = {
+  ; Standard thought fields
+  type: "thought/edld/v1",
+  ts: uint,                    ; timestamp in milliseconds
+  topic: text,                 ; semantic topic/channel
+  
+  ; ChronoFlux-IEL metrics
+  metrics: iel-metrics,
+  
+  ; EDLD-specific fields
+  intent: intent-field,
+  coherence: float,            ; 0.0-1.0
+  love: float,                 ; 0.0-1.0
+  error: float,                ; >= 0
+  mutation_vector: vector3,
+  stability: float,            ; 0.0-1.0
+  causal_log: [* cid],        ; array of previous thought CIDs
+  
+  ; Optional fields
+  ? signature: bytes,          ; cryptographic signature
+  ? node_id: text,            ; originating node identifier
+  ? resonance_map: {* text => float}, ; peer resonances
+}
+
+; Sub-structures
+iel-metrics = {
+  H: float,    ; coherence/harmony
+  tau: float,  ; turbulence
+  L: float,    ; love power
+}
+
+intent-field = {
+  value: float,
+  gradient: vector3,
+}
+
+vector3 = [float, float, float]
+
+; CID reference (self-describing hash)
+cid = bytes
+
+; Constraints
+float = number .ge 0.0
