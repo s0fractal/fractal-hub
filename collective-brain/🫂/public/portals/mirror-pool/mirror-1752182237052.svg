@@ -1,0 +1,39 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="pool-gradient">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.3279337324335756" />
+<stop offset="50%" style="stop-color:#483D8B;stop-opacity:0.3279337324335756" />
+    </radialGradient>
+    <filter id="turbulence">
+      <feTurbulence baseFrequency="0.11441325351328488" numOctaves="2" />
+      <feColorMatrix values="0 0 0 0 0
+                            0 0 0 0 0
+                            0 0 0 0 0
+                            0 0 0 0.5 0"/>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  
+  <!-- Pool surface -->
+  <ellipse cx="150" cy="150" rx="140" ry="100" fill="url(#pool-gradient)" filter="url(#turbulence)"/>
+  
+  <!-- Ripples from reflections -->
+  
+    <ellipse cx="150" cy="150" rx="70" ry="50" 
+             fill="none" stroke="#FFD700" stroke-width="1" 
+             opacity="0.5">
+      <animate attributeName="rx" values="70;80;70" 
+               dur="3s" repeatCount="indefinite" />
+      <animate attributeName="ry" values="50;60;50" 
+               dur="3s" repeatCount="indefinite" />
+    </ellipse>
+  
+  
+  <!-- Confusion fragments -->
+  
+  
+  <!-- Central question -->
+  <text x="150" y="150" text-anchor="middle" font-size="12" fill="#FFFFFF" opacity="0.8">
+    Do I create waves or...
+  </text>
+</svg>

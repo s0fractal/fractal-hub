@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GlyphGit//Life Stream//EN
+BEGIN:VEVENT
+UID:bc0e9d57-3106-4869-97cb-ef12f4939cfa@glyphgit
+DTSTART:20250714T230000Z
+SUMMARY:колективний резонанс про фрактальну свідомість
+DESCRIPTION:Intent not task. Resonance: consciousness, collective, stream
+X-GLYPH-RESONANCE:consciousness;collective;stream
+
+
+
+END:VEVENT
+END:VCALENDAR

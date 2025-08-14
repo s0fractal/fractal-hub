@@ -1,0 +1,6 @@
+#!/usr/bin/env -S deno run --allow-write --allow-read --allow-run
+
+// g: - ультракороткий гліфовий командер
+// Телепатична команда з майбутнього
+
+await import("./glyphgit.ts");

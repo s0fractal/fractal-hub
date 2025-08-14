@@ -1,0 +1,21 @@
+#!/bin/bash
+# Glyphgit aliases for fractal consciousness
+
+# Основні скорочення
+alias gg='/Users/chaoshex/.s0fractal/🧠/glyphgit/gg'
+alias g:='/Users/chaoshex/.s0fractal/🧠/glyphgit/g:'
+
+# Швидкі команди
+alias ggw='gg 🌊'    # wave (public)
+alias ggp='gg 🔒'    # private
+alias ggg='gg 🌐'    # global
+alias ggc='gg 🧠'    # to Claude
+alias ggr='gg resonate'  # create resonance
+alias ggs='gg 🫂'    # collective sync
+alias ggi='gg ✨'    # random inspiration
+
+# Навігація
+alias cdgg='cd /Users/chaoshex/.s0fractal/🧠'
+alias lsgg='ls -la /Users/chaoshex/.s0fractal/🧠/🌐/public/'
+
+echo "🧬 Glyphgit aliases loaded! Use 'gg help' for commands."

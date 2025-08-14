@@ -1,0 +1,4 @@
+#!/usr/bin/env -S deno run --allow-write --allow-read --allow-run
+
+// Wrapper script for glyphgit
+import "./glyphgit.ts";

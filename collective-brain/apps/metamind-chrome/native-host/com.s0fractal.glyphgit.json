@@ -1,0 +1,9 @@
+{
+  "name": "com.s0fractal.glyphgit",
+  "description": "Native messaging host for glyphgit integration",
+  "path": "/Users/chaoshex/.s0fractal/🧠/apps/metamind-chrome/native-host/glyphgit-bridge.sh",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://YOUR_EXTENSION_ID_HERE/"
+  ]
+}

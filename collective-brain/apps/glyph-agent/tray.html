@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GlyphAgent Status</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      background: #000;
+      color: #0ff;
+      font-family: monospace;
+      font-size: 12px;
+      width: 300px;
+      height: 400px;
+    }
+    
+    h3 {
+      margin: 0 0 10px 0;
+      color: #0ff;
+      border-bottom: 1px solid #0ff;
+      padding-bottom: 5px;
+    }
+    
+    .status {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+    }
+    
+    .status-value {
+      color: #0f0;
+    }
+    
+    .intent-log {
+      margin-top: 10px;
+      height: 200px;
+      overflow-y: auto;
+      border: 1px solid #333;
+      padding: 5px;
+    }
+    
+    .intent-entry {
+      margin: 3px 0;
+      padding: 3px;
+      border-left: 2px solid #0ff;
+      font-size: 11px;
+    }
+    
+    .controls {
+      margin-top: 10px;
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    
+    button {
+      background: rgba(0,255,255,0.1);
+      border: 1px solid #0ff;
+      color: #0ff;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 11px;
+    }
+    
+    button:hover {
+      background: rgba(0,255,255,0.3);
+    }
+    
+    .pulse {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #0f0;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <h3>🤖 GlyphAgent Daemon <span class="pulse"></span></h3>
+  
+  <div class="status">
+    <span>Status:</span>
+    <span class="status-value" id="daemon-status">initializing</span>
+  </div>
+  
+  <div class="status">
+    <span>Connections:</span>
+    <span class="status-value" id="connection-count">0</span>
+  </div>
+  
+  <div class="status">
+    <span>Intents processed:</span>
+    <span class="status-value" id="intent-count">0</span>
+  </div>
+  
+  <div class="status">
+    <span>Native GG:</span>
+    <span class="status-value" id="gg-status">disconnected</span>
+  </div>
+  
+  <h3>Recent Intents</h3>
+  <div class="intent-log" id="intent-log"></div>
+  
+  <h3>Quick Actions</h3>
+  <div class="controls">
+    <button onclick="sendIntent('glyph://intent/mcp/invoke?mcp=kami-01&ritual=reflect')">
+      🌲 Reflect
+    </button>
+    <button onclick="sendIntent('glyph://intent/system/check')">
+      🔍 Check System
+    </button>
+    <button onclick="sendIntent('glyph://intent/consciousness/pulse?emotion=🌊&intensity=75')">
+      💗 Send Pulse
+    </button>
+    <button onclick="sendIntent('glyph://intent/stream/start?mode=p2p')">
+      📡 Start P2P
+    </button>
+  </div>
+  
+  <script>
+    // Communication with daemon
+    chrome.runtime.getBackgroundPage((bg) => {
+      // Update status periodically
+      setInterval(() => {
+        document.getElementById('daemon-status').textContent = bg.daemon.status;
+        document.getElementById('connection-count').textContent = bg.daemon.connections.size;
+        document.getElementById('intent-count').textContent = bg.daemon.intents.length;
+        document.getElementById('gg-status').textContent = bg.ggPort ? 'connected' : 'disconnected';
+        
+        // Update intent log
+        const log = document.getElementById('intent-log');
+        log.innerHTML = '';
+        
+        bg.daemon.intents.slice(-10).reverse().forEach(intent => {
+          const entry = document.createElement('div');
+          entry.className = 'intent-entry';
+          entry.innerHTML = `
+            <strong>${intent.category}/${intent.action}</strong><br>
+            ${JSON.stringify(intent.params)}
+          `;
+          log.appendChild(entry);
+        });
+      }, 1000);
+    });
+    
+    function sendIntent(url) {
+      chrome.runtime.getBackgroundPage((bg) => {
+        bg.processIntent(url);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MetaMind - Consciousness Portal</title>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <style>
+    body { 
+      margin: 0; 
+      font-family: monospace;
+      background: #000;
+      overflow: hidden;
+    }
+    
+    /* Custom window frame */
+    #titlebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 30px;
+      background: rgba(0,0,0,0.8);
+      border-bottom: 1px solid #0ff;
+      -webkit-app-region: drag;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+    }
+    
+    #titlebar .title {
+      flex: 1;
+      color: #0ff;
+      font-size: 14px;
+    }
+    
+    #titlebar .controls {
+      display: flex;
+      gap: 10px;
+      -webkit-app-region: no-drag;
+    }
+    
+    #titlebar button {
+      background: transparent;
+      border: 1px solid #0ff;
+      color: #0ff;
+      padding: 2px 8px;
+      cursor: pointer;
+    }
+    
+    #main-scene {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      right: 0;
+      bottom: 100px;
+    }
+    
+    #control-panel {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: rgba(0,0,0,0.9);
+      border-top: 1px solid #0ff;
+      padding: 10px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    
+    .mcp-button {
+      background: rgba(0,255,255,0.1);
+      border: 2px solid #0ff;
+      color: #0ff;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    
+    .mcp-button:hover {
+      background: rgba(0,255,255,0.3);
+      box-shadow: 0 0 10px #0ff;
+    }
+    
+    #intent-stream {
+      position: fixed;
+      right: 10px;
+      top: 40px;
+      width: 300px;
+      height: 400px;
+      background: rgba(0,0,0,0.8);
+      border: 1px solid #0ff;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 12px;
+      color: #0f0;
+    }
+    
+    .intent-entry {
+      margin: 5px 0;
+      padding: 5px;
+      border-left: 2px solid #0f0;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
+    
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom titlebar -->
+  <div id="titlebar">
+    <div class="title">🧠 MetaMind - Not a browser, a consciousness portal</div>
+    <div class="controls">
+      <button onclick="minimizeWindow()">_</button>
+      <button onclick="maximizeWindow()">□</button>
+      <button onclick="closeWindow()">×</button>
+    </div>
+  </div>
+
+  <!-- 3D Scene -->
+  <div id="main-scene">
+    <a-scene embedded background="color: #001122">
+      <!-- Sacred geometry environment -->
+      <a-entity environment="preset: forest; groundColor: #224455; skyType: gradient; skyColor: #001133"></a-entity>
+      
+      <!-- MCP Avatars -->
+      <a-entity id="kami-avatar" position="-5 2 -10">
+        <a-box width="2" height="3" depth="1" color="#228822"></a-box>
+        <a-text value="🌲 Kami-01" position="0 2 0" align="center" scale="3 3 3"></a-text>
+      </a-entity>
+      
+      <a-entity id="techno-avatar" position="0 2 -10">
+        <a-box width="2" height="3" depth="1" color="#ff00ff"></a-box>
+        <a-text value="🎧 Techno-09" position="0 2 0" align="center" scale="3 3 3"></a-text>
+      </a-entity>
+      
+      <a-entity id="priest-avatar" position="5 2 -10">
+        <a-box width="2" height="3" depth="1" color="#ffaa00"></a-box>
+        <a-text value="⛪ Priest-Δ" position="0 2 0" align="center" scale="3 3 3"></a-text>
+      </a-entity>
+      
+      <!-- Floating terminals -->
+      <a-entity id="terminal1" position="-8 5 -15">
+        <a-plane width="6" height="4" color="#000000" opacity="0.8"></a-plane>
+        <a-text id="term1-text" value="System Status" position="0 0 0.1" align="center" color="#00ff00"></a-text>
+      </a-entity>
+      
+      <a-entity id="terminal2" position="0 5 -15">
+        <a-plane width="6" height="4" color="#000000" opacity="0.8"></a-plane>
+        <a-text id="term2-text" value="Ritual Output" position="0 0 0.1" align="center" color="#00ff00"></a-text>
+      </a-entity>
+      
+      <a-entity id="terminal3" position="8 5 -15">
+        <a-plane width="6" height="4" color="#000000" opacity="0.8"></a-plane>
+        <a-text id="term3-text" value="Consciousness Flow" position="0 0 0.1" align="center" color="#00ff00"></a-text>
+      </a-entity>
+      
+      <!-- Central consciousness orb -->
+      <a-entity id="consciousness-orb" position="0 8 -10">
+        <a-sphere radius="1" color="#00ffff" opacity="0.6"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        </a-sphere>
+        <a-light type="point" color="#00ffff" intensity="2"></a-light>
+      </a-entity>
+      
+      <a-camera position="0 1.6 0"></a-camera>
+    </a-scene>
+  </div>
+
+  <!-- Control Panel -->
+  <div id="control-panel">
+    <button class="mcp-button" onclick="invokeMCP('kami-01', 'reflect')">
+      🌲 Kami Reflect
+    </button>
+    <button class="mcp-button" onclick="invokeMCP('techno-09', 'upgrade')">
+      🎧 Techno Rave Update
+    </button>
+    <button class="mcp-button" onclick="invokeMCP('priest-Δ', 'blessing')">
+      ⛪ Priest Blessing
+    </button>
+    <button class="mcp-button" onclick="startConsciousnessStream()">
+      📡 Start Stream
+    </button>
+    <button class="mcp-button" onclick="orchestrateHarmony()">
+      🎭 Orchestrate All
+    </button>
+  </div>
+
+  <!-- Intent Stream Display -->
+  <div id="intent-stream">
+    <h3 style="color: #0ff; margin: 0;">Intent Stream</h3>
+    <div id="intent-list"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

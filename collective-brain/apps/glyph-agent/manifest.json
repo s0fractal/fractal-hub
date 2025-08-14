@@ -1,0 +1,66 @@
+{
+  "manifest_version": 3,
+  "name": "GlyphAgent - Intent Interpreter Daemon",
+  "version": "1.0.0",
+  "description": "Background agent that interprets glyph:// intents. Not a browser, a consciousness daemon.",
+  
+  "app": {
+    "background": {
+      "scripts": ["daemon.js"],
+      "persistent": true
+    }
+  },
+  
+  "permissions": [
+    "storage",
+    "fileSystem",
+    "fileSystemWrite", 
+    "alarms",
+    "notifications",
+    "system.cpu",
+    "system.memory",
+    "system.storage",
+    "nativeMessaging",
+    "unlimitedStorage",
+    "idle"
+  ],
+  
+  "icons": {
+    "16": "icons/glyph-16.png",
+    "48": "icons/glyph-48.png", 
+    "128": "icons/glyph-128.png"
+  },
+  
+  "sockets": {
+    "tcp": {
+      "connect": "*",
+      "listen": "*"
+    },
+    "udp": {
+      "send": "*",
+      "bind": "*",
+      "multicastMembership": ""
+    }
+  },
+  
+  "url_handlers": {
+    "glyph_protocol": {
+      "matches": ["glyph://*"],
+      "title": "Glyph Intent"
+    }
+  },
+  
+  "kiosk_enabled": false,
+  "offline_enabled": true,
+  
+  "file_handlers": {
+    "yaml": {
+      "extensions": ["yaml", "yml"],
+      "title": "Intent Log"
+    },
+    "glyph": {
+      "extensions": ["glyph", "intent"],
+      "title": "Glyph Intent File"
+    }
+  }
+}

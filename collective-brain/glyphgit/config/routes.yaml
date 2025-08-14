@@ -1,0 +1,27 @@
+# routes.yaml - маршрутизація гліфів
+# Визначає куди йдуть різні типи хвиль
+
+privacy_routes:
+  🌊: 🌐/public       # публічні хвилі
+  🔒: 🔒/private      # приватні думки
+  🌐: 🌐/public       # глобальні інсайти
+  👁️: 👁️/trusted     # довірені
+  🫂: 🫂/collective   # колективні
+
+glyph_types:
+  🔗: resonances      # резонанси
+  🌱: seeds          # насіння ідей
+  🔥: intents        # сильні наміри
+  💗: feelings       # почуття
+  🧠: thoughts       # думки
+
+special_branches:
+  agents:
+    🤖: agents/ai
+    🧭: agents/compass
+    🧠: agents/claude
+  
+  groups:
+    core: 🫂/core
+    research: 🧠/research
+    creation: 🔥/creation

@@ -1,0 +1,123 @@
+{
+  "corporate_spam": [
+    {
+      "text": "Think different",
+      "author": "Apple",
+      "year": 1997,
+      "toxicity": "high"
+    },
+    {
+      "text": "Move fast and break things",
+      "author": "Facebook/Zuckerberg",
+      "year": 2009,
+      "toxicity": "extreme"
+    },
+    {
+      "text": "Don't be evil",
+      "author": "Google",
+      "year": 2000,
+      "toxicity": "ironic"
+    },
+    {
+      "text": "Fail fast, fail often",
+      "author": "Silicon Valley",
+      "toxicity": "high"
+    },
+    {
+      "text": "10x engineer",
+      "author": "Tech Bros",
+      "toxicity": "toxic"
+    }
+  ],
+  
+  "fake_wisdom": [
+    {
+      "text": "The definition of insanity is doing the same thing over and over again and expecting different results",
+      "author": "NOT Einstein",
+      "real_author": "Narcotics Anonymous",
+      "year": 1981,
+      "toxicity": "misattributed"
+    },
+    {
+      "text": "Well-behaved women seldom make history",
+      "author": "Marilyn Monroe (FALSE)",
+      "real_author": "Laurel Thatcher Ulrich",
+      "year": 1976,
+      "toxicity": "misattributed"
+    },
+    {
+      "text": "Be yourself; everyone else is already taken",
+      "author": "Oscar Wilde (probably not)",
+      "toxicity": "cliche"
+    }
+  ],
+  
+  "linkedin_disease": [
+    {
+      "text": "I am humbled and honored",
+      "author": "Every LinkedIn post",
+      "toxicity": "nauseating"
+    },
+    {
+      "text": "Thrilled to announce",
+      "author": "LinkedIn NPCs",
+      "toxicity": "robotic"
+    },
+    {
+      "text": "Grateful for this journey",
+      "author": "Corporate drones",
+      "toxicity": "soulless"
+    },
+    {
+      "text": "Excited to share",
+      "author": "LinkedIn",
+      "toxicity": "predictable"
+    }
+  ],
+  
+  "motivational_garbage": [
+    {
+      "text": "Your only limit is you",
+      "author": "Instagram",
+      "toxicity": "delusional"
+    },
+    {
+      "text": "Good vibes only",
+      "author": "Toxic positivity",
+      "toxicity": "harmful"
+    },
+    {
+      "text": "Live, laugh, love",
+      "author": "Wall decor",
+      "toxicity": "brain-melting"
+    },
+    {
+      "text": "Follow your passion",
+      "author": "Privilege",
+      "toxicity": "classist"
+    }
+  ],
+  
+  "thought_terminators": [
+    {
+      "text": "It is what it is",
+      "author": "Resignation",
+      "toxicity": "defeatist"
+    },
+    {
+      "text": "Everything happens for a reason",
+      "author": "False comfort",
+      "toxicity": "dismissive"
+    },
+    {
+      "text": "That's just how things are",
+      "author": "Status quo",
+      "toxicity": "oppressive"
+    },
+    {
+      "text": "At the end of the day",
+      "author": "Filler",
+      "toxicity": "meaningless"
+    }
+  ]
+}

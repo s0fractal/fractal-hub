@@ -1,0 +1,6 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#9370DB" opacity="0.77"/>
+  <text x="150" y="150" text-anchor="middle" font-size="48" fill="white">🎭</text>
+  <text x="150" y="180" text-anchor="middle" font-size="16" fill="white">Irony</text>
+  <text x="150" y="200" text-anchor="middle" font-size="12" fill="white">Intensity: 77</text>
+</svg>

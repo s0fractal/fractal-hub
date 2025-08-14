@@ -1,0 +1,17 @@
+node:
+  id: Chaoss-Mac-mini.local
+  type: orchestrator
+  location: digital-ocean
+  ip: 0.0.0.0
+  created: 2025-07-11T20:24:25.133Z
+  
+capabilities:
+  - calendar-agent
+  - inbox-agent
+  - stream-watcher
+  - pulse-engine
+  - habitat-manager
+  
+trust_cluster:
+  trusted_nodes: []
+  public_key: a264d0c7-28e0-4630-9bec-399d9c154d14

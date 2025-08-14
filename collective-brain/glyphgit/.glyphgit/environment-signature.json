@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-07-11T20:37:16.464Z",
+  "hostname": "Chaoss-Mac-mini.local",
+  "user": "chaoshex",
+  "devices": [],
+  "drives": [
+    "/Volumes/.timemachine",
+    "/Volumes/Q",
+    "/Volumes/devcontainer",
+    "/Volumes/sergijglova",
+    "/",
+    "/Users/chaoshex/Library/CloudStorage/GoogleDrive-sergey.glova@gmail.com"
+  ],
+  "hash": "d96932be70aa68cc4a622c30ebe52819a0d28e0daf0cf7c313eb1f683f73d999"
+}

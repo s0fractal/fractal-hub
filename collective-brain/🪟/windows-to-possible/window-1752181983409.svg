@@ -1,0 +1,83 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="portal-gradient">
+      <stop offset="0%" style="stop-color:#45B7D1;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:0.1" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Portal rings -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="url(#portal-gradient)" stroke-width="3" opacity="0.6" filter="url(#glow)">
+    <animate attributeName="r" values="80;90;80" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="100" r="60" fill="none" stroke="url(#portal-gradient)" stroke-width="2" opacity="0.7" filter="url(#glow)">
+    <animate attributeName="r" values="60;55;60" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="100" r="40" fill="none" stroke="url(#portal-gradient)" stroke-width="2" opacity="0.8" filter="url(#glow)">
+    <animate attributeName="r" values="40;45;40" dur="2s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Center void -->
+  <circle cx="100" cy="100" r="20" fill="#45B7D1" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Possibility particles -->
+  
+      <circle cx="162.01650878463624" cy="100" r="4.456363033144211" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="3.937025726679299s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="149.21814141575467" cy="128.41610719539904" r="4.404784382132819" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="3.737477698471407s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="133.1590064086655" cy="157.43308382831066" r="4.88848238130489" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="4.7166961794443925s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="100" cy="155.33481359838856" r="4.358709304804979" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="3.3069083127499206s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="61.26740273798928" cy="167.08682636690577" r="2.329608732665703" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="3.556851790491634s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="37.91619573727624" cy="135.8441011033996" r="2.790173675713536" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="4.044663548269333s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="27.447096016300605" cy="100.00000000000001" r="4.161324020942285" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="4.432918026536331s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="33.29695088079718" cy="61.48897663525941" r="4.195293277507062" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="3.436323979968593s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="65.03258380176001" cy="39.43465853524145" r="4.9279942719065115" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="3.0584317042879254s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="99.99999999999999" cy="24.7177297094332" r="2.163517068885435" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="3.2508850044885267s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="136.91267532288452" cy="36.06537089747012" r="2.3577780581474093" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="4.913713486153831s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="154.7064738187104" cy="68.4152026143523" r="2.6976170824895935" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="opacity" values="0;0.8;0" dur="3.673336772048139s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite" />
+      </circle>
+</svg>

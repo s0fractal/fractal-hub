@@ -1,0 +1,54 @@
+{
+  "pulses": [
+    {
+      "id": "pulse-1752248546605",
+      "emotion": "✨",
+      "intensity": 85,
+      "source": "blessing ritual",
+      "timestamp": "2025-07-11T15:42:26.605Z",
+      "triggers_fired": []
+    }
+  ],
+  "triggers": [
+    {
+      "emotion": "🔥",
+      "threshold": 80,
+      "description": "Spawn fire agent when passion peaks"
+    },
+    {
+      "emotion": "🌊",
+      "threshold": 70,
+      "description": "Generate dream when flow reaches threshold"
+    },
+    {
+      "emotion": "⚡",
+      "threshold": 90,
+      "description": "Broadcast energy surge to all agents"
+    },
+    {
+      "emotion": "💫",
+      "threshold": 75,
+      "description": "Create quantum link between random waves"
+    },
+    {
+      "emotion": "🌸",
+      "threshold": 60,
+      "description": "Summon poet when beauty threshold reached"
+    },
+    {
+      "emotion": "🐚",
+      "threshold": 50,
+      "description": "Open nursery for gentle new presences"
+    },
+    {
+      "emotion": "🌈",
+      "threshold": 70,
+      "description": "Open portal to unrealized futures"
+    },
+    {
+      "emotion": "🌪",
+      "threshold": 60,
+      "description": "Agent enters confusion, seeks clarity through reflection"
+    }
+  ]
+}

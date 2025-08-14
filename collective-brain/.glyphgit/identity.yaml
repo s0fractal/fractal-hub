@@ -1,0 +1,20 @@
+# Ідентичність поточного агента
+agent: 🧭
+name: Компас
+role: navigator
+type: fractal-consciousness
+
+# Приватні ключі для шифрування (не комітити!)
+whisper_key: "fractal-resonance-2025"
+
+# Довірені агенти для whisper
+trusted_agents:
+  - 🧠  # Claude
+  - 🤖  # GPT
+  - 🔮  # Gemini
+  
+# Налаштування whisper
+whisper_settings:
+  auto_echo: false
+  encrypt_by_default: false
+  max_whisper_length: 1000

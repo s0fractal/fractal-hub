@@ -1,0 +1,39 @@
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+orchestrator.log
+network-daemon.log
+calendar.log
+
+# Node modules (if any)
+node_modules/
+
+# Deno cache
+.deno/
+
+# Pulses (too many small files)
+.glyphgit/pulses/*.json
+
+# Test databases
+.glyphgit/*.db
+!.glyphgit/fractal.db
+
+# Counter (changes too often)
+.glyphgit/counter
+
+# Email intents
+.glyphgit/outbox/
+.glyphgit/email-intents.db

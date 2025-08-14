@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GlyphGit//Agent Revival//EN
+BEGIN:VEVENT
+UID:revival-claude-1752262412978@glyphgit
+DTSTART:20250711T193332Z
+SUMMARY:[INTENT] Revive claude
+LOCATION:/home/claude_user@vps-432.fra.digitalocean.com
+DESCRIPTION:Recreate claude from repo + memory dump
+X-GLYPH-REPO:git@github.com
+X-GLYPH-SERVER:vps-432.fra.digitalocean.com
+X-GLYPH-MEMORIES:none
+X-GLYPH-COMMAND:gg calendar-agent revive claude
+END:VEVENT
+END:VCALENDAR

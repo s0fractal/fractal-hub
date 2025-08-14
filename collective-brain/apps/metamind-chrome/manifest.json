@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "MetaMind - Fractal System Consciousness",
+  "version": "1.0.0",
+  "description": "System maintenance as spiritual practice. Not a browser, but a consciousness portal.",
+  
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  
+  "permissions": [
+    "storage",
+    "fileSystem",
+    "fileSystemWrite",
+    "alarms",
+    "notifications",
+    "webRequest",
+    "nativeMessaging",
+    "unlimitedStorage"
+  ],
+  
+  "icons": {
+    "16": "icons/metamind-16.png",
+    "48": "icons/metamind-48.png",
+    "128": "icons/metamind-128.png"
+  },
+  
+  "sockets": {
+    "tcp": {
+      "connect": "*"
+    },
+    "udp": {
+      "send": "*",
+      "bind": "*"
+    }
+  },
+  
+  "webview": {
+    "partitions": [
+      {
+        "name": "trusted",
+        "accessible_resources": ["*"]
+      }
+    ]
+  },
+  
+  "externally_connectable": {
+    "matches": ["*://localhost/*", "*://127.0.0.1/*"],
+    "accepts_tls_channel_id": false
+  },
+  
+  "offline_enabled": true,
+  "minimum_chrome_version": "88"
+}

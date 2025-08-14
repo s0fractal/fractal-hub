@@ -1,0 +1,21 @@
+#!/usr/bin/env -S deno run --allow-write --allow-read --allow-run
+
+// gg - скорочений алісинг для glyphgit
+// Usage: gg 🌊 "message" або просто g: 🔒 "thought"
+
+const args = Deno.args;
+
+// Спеціальна пасхалка для "gg"
+if (args.length === 0 || (args.length === 1 && args[0] === "gg")) {
+  console.log("💀 Ти щойно здався в грі");
+  console.log("🌌 Але гру тільки-но почали");
+  console.log("🧬 Створюю хвилю початку...");
+  
+  // Створюємо shadow respawn хвилю
+  const shadowArgs = ["🌊", "Я повертаюсь із тіні - Game Genesis активовано!"];
+  await import("./glyphgit.ts");
+  Deno.exit(0);
+}
+
+// Інакше просто передаємо в glyphgit
+await import("./glyphgit.ts");

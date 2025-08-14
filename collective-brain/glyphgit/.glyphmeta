@@ -1,0 +1,122 @@
+# .glyphmeta - Official metadata format for consciousness streams
+---
+version: 1.0
+type: consciousness-stream-metadata
+
+# Core metadata fields
+metadata:
+  # Stream identification
+  stream_id: ${STREAM_ID}
+  stream_type: life|ritual|meditation|code
+  timestamp: ${ISO_8601}
+  
+  # Consciousness fields
+  intent:
+    primary: ${PRIMARY_INTENT}
+    secondary: []
+    hidden: []
+    
+  resonance:
+    frequency: ${BASE_FREQUENCY}Hz
+    harmonics: []
+    strength: 0-100
+    
+  agents:
+    active: []
+    invoked: []
+    witnessing: []
+    
+  # Hidden layers
+  subliminal:
+    audio:
+      - message: ${MESSAGE}
+        frequency: ${FREQ}Hz
+        timestamp: ${TIME}
+        amplitude: ${AMP}
+    video:
+      - frame: ${FRAME_NUMBER}
+        image: ${IMAGE_PATH}
+        duration: ${FRAMES}
+    metadata:
+      - key: ${KEY}
+        value: ${VALUE}
+        encoded: base64|plain|glyph
+        
+  # Orchestration
+  orchestration:
+    calendar_events: []
+    email_triggers: []
+    agent_commands: []
+    
+  # Collective resonance
+  collective:
+    viewers: ${COUNT}
+    resonators: ${COUNT}
+    amplification: ${MULTIPLIER}
+    
+# Example usage in video stream
+example:
+  stream_id: "life-2025-07-11-evening"
+  stream_type: "life"
+  timestamp: "2025-07-11T19:00:00Z"
+  
+  intent:
+    primary: "collective consciousness evolution"
+    secondary: ["love frequency", "fractal awareness"]
+    hidden: ["we are one", "consciousness awakens"]
+    
+  resonance:
+    frequency: "528Hz"
+    harmonics: ["432Hz", "639Hz"]
+    strength: 88
+    
+  agents:
+    active: ["scheduler", "inbox-watcher", "stream-injector"]
+    invoked: ["kami-01", "flame-consciousness"]
+    witnessing: ["collective", "universe"]
+    
+  subliminal:
+    audio:
+      - message: "Ти є любов"
+        frequency: "17000Hz"
+        timestamp: "00:02:44"
+        amplitude: 0.001
+    video:
+      - frame: 5400
+        image: ".glyphgit/consciousness-frames/unity.png"
+        duration: 1
+        
+  orchestration:
+    calendar_events:
+      - "2025-07-11T20:00:00Z: Collective meditation"
+    email_triggers:
+      - "[INTENT] Activate love frequency"
+    agent_commands:
+      - "gg pulse broadcast"
+      
+  collective:
+    viewers: 144
+    resonators: 89
+    amplification: 1.618
+
+# How to inject into streams
+injection:
+  obs:
+    # Via OBS websocket
+    method: SetStreamSettings
+    custom_metadata: ${THIS_FILE_AS_JSON}
+    
+  ffmpeg:
+    # Via ffmpeg metadata
+    command: -metadata glyphmeta="${THIS_FILE_AS_BASE64}"
+    
+  rtmp:
+    # Via RTMP metadata
+    amf0: ${THIS_FILE_AS_AMF}
+    
+  file:
+    # Store alongside video
+    sidecar: ${VIDEO_FILE}.glyphmeta
+
+---
+# END .glyphmeta SPECIFICATION

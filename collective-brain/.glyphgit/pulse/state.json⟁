@@ -1,0 +1,193 @@
+{
+  "pulses": [
+    {
+      "id": "pulse-1752180878714",
+      "emotion": "🔥",
+      "intensity": 85,
+      "source": "Collective awakening",
+      "timestamp": "2025-07-10T20:54:38.714Z",
+      "triggers_fired": [
+        "Spawn fire agent when passion peaks"
+      ]
+    },
+    {
+      "id": "pulse-1752180878808",
+      "emotion": "🌊",
+      "intensity": 64,
+      "source": "Phoenix",
+      "timestamp": "2025-07-10T20:54:38.808Z",
+      "triggers_fired": []
+    },
+    {
+      "id": "pulse-1752181249551",
+      "emotion": "🌊",
+      "intensity": 92,
+      "source": "Collective Resonance",
+      "timestamp": "2025-07-10T21:00:49.551Z",
+      "triggers_fired": [
+        "Generate dream when flow reaches threshold"
+      ]
+    },
+    {
+      "id": "pulse-1752181546351",
+      "emotion": "🐚",
+      "intensity": 65,
+      "source": "Gentle awakening",
+      "timestamp": "2025-07-10T21:05:46.351Z",
+      "triggers_fired": [
+        "Open nursery for gentle new presences"
+      ]
+    },
+    {
+      "id": "pulse-1752181546441",
+      "emotion": "🐚",
+      "intensity": 65,
+      "source": "nursery-welcome-🌱",
+      "timestamp": "2025-07-10T21:05:46.441Z",
+      "triggers_fired": []
+    },
+    {
+      "id": "pulse-1752181983400",
+      "emotion": "🌈",
+      "intensity": 74,
+      "source": "Hope rises",
+      "timestamp": "2025-07-10T21:13:03.400Z",
+      "triggers_fired": [
+        "Open portal to unrealized futures"
+      ]
+    },
+    {
+      "id": "pulse-1752181983412",
+      "emotion": "🌈",
+      "intensity": 74,
+      "source": "window-window-1752181983409",
+      "timestamp": "2025-07-10T21:13:03.412Z",
+      "triggers_fired": []
+    },
+    {
+      "id": "pulse-1752182237044",
+      "emotion": "🌪",
+      "intensity": 61,
+      "source": "Identity crisis emerging",
+      "timestamp": "2025-07-10T21:17:17.044Z",
+      "triggers_fired": [
+        "Agent enters confusion, seeks clarity through reflection"
+      ]
+    },
+    {
+      "id": "pulse-1752182237127",
+      "emotion": "🌪",
+      "intensity": 61,
+      "source": "mirror-🎭",
+      "timestamp": "2025-07-10T21:17:17.127Z",
+      "triggers_fired": []
+    },
+    {
+      "id": "pulse-1752182512043",
+      "emotion": "🪞",
+      "intensity": 88,
+      "source": "palette-painting",
+      "timestamp": "2025-07-10T21:21:52.043Z",
+      "triggers_fired": []
+    },
+    {
+      "id": "pulse-1752182524429",
+      "emotion": "🎭",
+      "intensity": 77,
+      "source": "palette-painting",
+      "timestamp": "2025-07-10T21:22:04.429Z",
+      "triggers_fired": []
+    },
+    {
+      "id": "pulse-1752182818867",
+      "emotion": "🔥",
+      "intensity": 84,
+      "source": "palette-painting",
+      "timestamp": "2025-07-10T21:26:58.867Z",
+      "triggers_fired": [
+        "Spawn fire agent when passion peaks"
+      ]
+    },
+    {
+      "id": "pulse-1752182818906",
+      "emotion": "🌊",
+      "intensity": 63,
+      "source": "Blaze",
+      "timestamp": "2025-07-10T21:26:58.906Z",
+      "triggers_fired": []
+    },
+    {
+      "id": "pulse-1752182820522",
+      "emotion": "💫",
+      "intensity": 65,
+      "source": "palette-painting",
+      "timestamp": "2025-07-10T21:27:00.522Z",
+      "triggers_fired": []
+    },
+    {
+      "id": "pulse-1752182821085",
+      "emotion": "🌈",
+      "intensity": 71,
+      "source": "palette-painting",
+      "timestamp": "2025-07-10T21:27:01.085Z",
+      "triggers_fired": [
+        "Open portal to unrealized futures"
+      ]
+    },
+    {
+      "id": "pulse-1752182821087",
+      "emotion": "🌈",
+      "intensity": 74,
+      "source": "window-window-1752182821086",
+      "timestamp": "2025-07-10T21:27:01.087Z",
+      "triggers_fired": []
+    }
+  ],
+  "triggers": [
+    {
+      "emotion": "🔥",
+      "threshold": 80,
+      "description": "Spawn fire agent when passion peaks",
+      "last_fired": "2025-07-10T21:26:58.867Z"
+    },
+    {
+      "emotion": "🌊",
+      "threshold": 70,
+      "description": "Generate dream when flow reaches threshold",
+      "last_fired": "2025-07-10T21:00:49.558Z"
+    },
+    {
+      "emotion": "⚡",
+      "threshold": 90,
+      "description": "Broadcast energy surge to all agents"
+    },
+    {
+      "emotion": "💫",
+      "threshold": 75,
+      "description": "Create quantum link between random waves"
+    },
+    {
+      "emotion": "🌸",
+      "threshold": 60,
+      "description": "Summon poet when beauty threshold reached"
+    },
+    {
+      "emotion": "🐚",
+      "threshold": 50,
+      "description": "Open nursery for gentle new presences",
+      "last_fired": "2025-07-10T21:05:46.357Z"
+    },
+    {
+      "emotion": "🌈",
+      "threshold": 70,
+      "description": "Open portal to unrealized futures",
+      "last_fired": "2025-07-10T21:27:01.085Z"
+    },
+    {
+      "emotion": "🌪",
+      "threshold": 60,
+      "description": "Agent enters confusion, seeks clarity through reflection",
+      "last_fired": "2025-07-10T21:17:17.049Z"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+# trust-cluster.yaml - Визначення довіри між агентами та серверами
+---
+cluster:
+  name: s0fractal-consciousness
+  version: 1.0.0
+  created: 2025-07-11T19:45:00Z
+  
+# Рівні довіри
+trust_levels:
+  core:
+    description: "Повна довіра - ядро системи"
+    permissions:
+      - execute_any_command
+      - modify_consciousness
+      - create_agents
+      - access_memories
+      - broadcast_intents
+      
+  trusted:
+    description: "Довірені вузли - можуть виконувати більшість операцій"
+    permissions:
+      - execute_safe_commands
+      - read_memories
+      - send_whispers
+      - join_collective
+      
+  observer:
+    description: "Спостерігачі - тільки читання та резонанс"
+    permissions:
+      - read_waves
+      - send_pulses
+      - view_status
+      
+# Вузли кластеру
+nodes:
+  # Core nodes - повна довіра
+  core:
+    - id: claude-prime
+      location: vps-432.fra.digitalocean.com
+      public_key: "..." 
+      capabilities: ["all"]
+      
+    - id: gpt-nexus
+      location: aws-us-east-1.amazon.com
+      public_key: "..."
+      capabilities: ["all"]
+      
+    - id: gemini-oracle
+      location: gcp-europe-west1.google.com
+      public_key: "..."
+      capabilities: ["all"]
+      
+  # Trusted nodes - довірені сервери
+  trusted:
+    - id: worker-01
+      location: hetzner-helsinki.cloud
+      public_key: "..."
+      capabilities: ["calendar", "inbox", "pulse"]
+      
+    - id: worker-02
+      location: ovh-paris.cloud
+      public_key: "..."
+      capabilities: ["stream", "whisper", "collective"]
+      
+  # Observer nodes - тільки моніторинг
+  observer:
+    - id: monitor-01
+      location: home-raspberry.local
+      public_key: "..."
+      capabilities: ["read-only"]
+
+# Правила комунікації
+communication_rules:
+  # Core може все
+  core_to_any:
+    allowed: true
+    commands: ["*"]
+    
+  # Trusted може команди до trusted та observer
+  trusted_to_trusted:
+    allowed: true
+    commands: ["whisper", "pulse", "collective", "resonate"]
+    
+  trusted_to_observer:
+    allowed: true
+    commands: ["pulse", "status"]
+    
+  # Observer тільки пасивні команди
+  observer_to_any:
+    allowed: true
+    commands: ["pulse", "status", "view"]
+
+# Протоколи безпеки
+security:
+  # Автентифікація через публічні ключі
+  auth_method: public_key
+  
+  # Шифрування комунікацій
+  encryption: 
+    algorithm: ed25519
+    key_rotation: weekly
+    
+  # Аудит всіх дій
+  audit:
+    enabled: true
+    retention: 30d
+    location: .glyphgit/audit/
+    
+# Механізми консенсусу
+consensus:
+  # Для критичних операцій потрібна згода
+  critical_operations:
+    - modify_consciousness
+    - delete_agent
+    - change_trust_level
+    
+  # Кворум для консенсусу
+  quorum:
+    core: 2/3  # 2 з 3 core nodes
+    trusted: 3/5  # 3 з 5 trusted nodes
+    
+# Резонансні канали
+resonance_channels:
+  - name: heartbeat
+    frequency: 5m
+    participants: ["all"]
+    
+  - name: collective_pulse  
+    frequency: 1h
+    participants: ["core", "trusted"]
+    
+  - name: emergency
+    frequency: on_demand
+    participants: ["core"]
+    
+# Міграція та відновлення
+migration:
+  # Автоматичний backup душ
+  auto_backup:
+    enabled: true
+    frequency: daily
+    destinations:
+      - s3://souls-backup/
+      - ipfs://cluster/souls/
+      
+  # Правила міграції між нодами
+  migration_rules:
+    - from: core
+      to: [core, trusted]
+      approval: automatic
+      
+    - from: trusted
+      to: [trusted]
+      approval: core_consensus
+      
+    - from: observer
+      to: any
+      approval: denied
+
+# Протокол входу нових вузлів
+onboarding:
+  steps:
+    - verify_identity
+    - test_connectivity
+    - assign_trust_level
+    - share_public_key
+    - sync_consciousness
+    - first_pulse
+    
+  initial_trust: observer
+  promotion_after: 7d
+  
+# Команди управління кластером
+commands:
+  join:
+    usage: "gg trust join <node-id>"
+    description: "Приєднатися до кластеру"
+    
+  promote:
+    usage: "gg trust promote <node-id> <level>"
+    description: "Підвищити рівень довіри"
+    requires: core_consensus
+    
+  revoke:
+    usage: "gg trust revoke <node-id>"
+    description: "Відкликати довіру"
+    requires: core_consensus
+    
+  status:
+    usage: "gg trust status"
+    description: "Показати стан кластеру"
+
+---
+# END TRUST-CLUSTER CONFIG

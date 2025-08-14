@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intent Flow Visualizer</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+      font-family: monospace;
+    }
+    
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    #info {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #0ff;
+      font-size: 12px;
+      background: rgba(0,0,0,0.8);
+      padding: 10px;
+      border: 1px solid #0ff;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div id="info">
+    <h3>Intent Flow Visualization</h3>
+    <div id="stats"></div>
+  </div>
+  
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    // Intent particles
+    const particles = [];
+    const connections = [];
+    
+    class IntentParticle {
+      constructor(intent) {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 2;
+        this.vy = (Math.random() - 0.5) * 2;
+        this.radius = 5;
+        this.intent = intent;
+        this.color = this.getColorForCategory(intent.category);
+        this.life = 1.0;
+      }
+      
+      getColorForCategory(category) {
+        const colors = {
+          'mcp': '#00ff00',
+          'system': '#ffff00',
+          'consciousness': '#00ffff',
+          'stream': '#ff00ff',
+          'gg': '#ff8800'
+        };
+        return colors[category] || '#ffffff';
+      }
+      
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        
+        // Bounce off edges
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        
+        // Fade out
+        this.life -= 0.005;
+      }
+      
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.life;
+        
+        // Glow effect
+        ctx.shadowBlur = 20;
+        ctx.shadowColor = this.color;
+        
+        // Draw particle
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Draw label
+        ctx.fillStyle = '#fff';
+        ctx.font = '10px monospace';
+        ctx.fillText(`${this.intent.category}/${this.intent.action}`, this.x + 10, this.y - 10);
+        
+        ctx.restore();
+      }
+    }
+    
+    class Connection {
+      constructor(p1, p2) {
+        this.p1 = p1;
+        this.p2 = p2;
+        this.strength = 1.0;
+      }
+      
+      update() {
+        this.strength = Math.min(this.p1.life, this.p2.life);
+      }
+      
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.strength * 0.3;
+        ctx.strokeStyle = '#0ff';
+        ctx.lineWidth = 1;
+        
+        ctx.beginPath();
+        ctx.moveTo(this.p1.x, this.p1.y);
+        ctx.lineTo(this.p2.x, this.p2.y);
+        ctx.stroke();
+        
+        ctx.restore();
+      }
+    }
+    
+    // Animation loop
+    function animate() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Update and draw particles
+      particles.forEach((particle, i) => {
+        particle.update();
+        particle.draw();
+        
+        // Remove dead particles
+        if (particle.life <= 0) {
+          particles.splice(i, 1);
+        }
+      });
+      
+      // Update connections
+      connections.length = 0;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          
+          if (dist < 150) {
+            connections.push(new Connection(particles[i], particles[j]));
+          }
+        }
+      }
+      
+      // Draw connections
+      connections.forEach(conn => {
+        conn.update();
+        conn.draw();
+      });
+      
+      // Update stats
+      document.getElementById('stats').innerHTML = `
+        Active intents: ${particles.length}<br>
+        Connections: ${connections.length}
+      `;
+      
+      requestAnimationFrame(animate);
+    }
+    
+    // Listen for new intents
+    chrome.runtime.getBackgroundPage((bg) => {
+      // Check for new intents periodically
+      let lastIntentCount = 0;
+      
+      setInterval(() => {
+        const intents = bg.daemon.intents;
+        
+        if (intents.length > lastIntentCount) {
+          // Add new intent particles
+          const newIntents = intents.slice(lastIntentCount);
+          newIntents.forEach(intent => {
+            particles.push(new IntentParticle(intent));
+          });
+          
+          lastIntentCount = intents.length;
+        }
+      }, 100);
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+    
+    // Start animation
+    animate();
+  </script>
+</body>
+</html>

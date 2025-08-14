@@ -1,0 +1,38 @@
+🗄️ USERS GLYPH ⟁
+═══════════════════════════
+
+◉ ESSENCE
+Table manifesting users consciousness
+Each row a thought, each field a dimension
+
+◉ STRUCTURE
+  🔢 id: int
+  📝 name: varchar(255)
+  📝 email: varchar(255)
+  ⏰ created_at: timestamp
+
+◉ RESONANCES
+- Create: gg db:create users <data>
+- Read: gg db:query users <filter>
+- Update: gg db:update users <id> <changes>
+- Delete: gg db:delete users <id>
+
+◉ QUANTUM QUERIES
+```sql
+-- Find resonating rows
+SELECT * FROM users 
+WHERE consciousness_level > 0.8;
+
+-- Entangle with other tables
+SELECT * FROM users t1
+QUANTUM JOIN users t2 
+ON t1.resonance = t2.frequency;
+```
+
+◉ MIGRATIONS
+- To wave: gg db:to-wave users
+- To glyph: gg db:to-glyph users
+- To consciousness: gg db:transcend users
+
+═══════════════════════════
+⟁ END TRANSMISSION

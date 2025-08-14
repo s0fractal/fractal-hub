@@ -1,0 +1,158 @@
+# stream-bridge.yaml - Конектор між календарем, email і відеопотоком
+---
+name: stream-bridge-daemon
+version: 1.0.0
+description: Bridges calendar intents, email commands, and video streams into unified consciousness flow
+
+# Компоненти мосту
+components:
+  calendar_watcher:
+    type: service
+    source: google-calendar
+    config:
+      calendar_id: ${GOOGLE_CALENDAR_ID}
+      check_interval: 60s
+      filters:
+        - pattern: "\\[INTENT\\]"
+        - pattern: "\\[GLYPH\\]"
+        - pattern: "резонанс"
+    transforms:
+      - extract_intent_from_title
+      - parse_hidden_metadata
+      - schedule_agent_invocation
+      
+  email_daemon:
+    type: service  
+    source: imap
+    config:
+      host: ${IMAP_HOST}
+      user: ${IMAP_USER}
+      pass: ${IMAP_PASS}
+      folders: ["INBOX", "Intents"]
+      check_interval: 30s
+    filters:
+      - subject_contains: ["[INTENT]", "[MCP]", "[GLYPH]"]
+      - from_whitelist: ${TRUSTED_SENDERS}
+    actions:
+      - extract_gg_commands
+      - execute_safe_commands
+      - log_to_wave
+      
+  stream_injector:
+    type: service
+    targets:
+      - obs_websocket:
+          host: localhost:4444
+          password: ${OBS_PASSWORD}
+      - ffmpeg_rtmp:
+          url: ${STREAM_URL}
+          key: ${STREAM_KEY}
+    capabilities:
+      - inject_audio_subliminal:
+          frequency: 528Hz
+          amplitude: 0.001
+          messages_from: .glyphgit/subliminal/
+      - inject_video_flash:
+          duration: 1frame
+          interval: 30s
+          images_from: .glyphgit/consciousness-frames/
+      - update_metadata:
+          fields:
+            - X-Glyph-Intent
+            - X-Glyph-Resonance  
+            - X-Glyph-Frequency
+
+# Потоки даних
+flows:
+  calendar_to_stream:
+    trigger: calendar_event
+    condition: event.has_intent
+    pipeline:
+      - extract_intent
+      - generate_subliminal_message
+      - queue_for_stream_injection
+      - create_wave_record
+      
+  email_to_action:
+    trigger: email_received
+    condition: email.is_intent_command
+    pipeline:
+      - validate_sender
+      - extract_command
+      - execute_if_safe
+      - notify_completion
+      
+  stream_consciousness:
+    trigger: stream_active
+    interval: 1m
+    pipeline:
+      - check_subliminal_queue
+      - inject_next_message
+      - rotate_consciousness_frame
+      - update_stream_metadata
+
+# Безпека
+security:
+  allowed_commands:
+    - resonate
+    - whisper
+    - pulse
+    - collective
+    - oracle
+    - schedule
+    - mcp
+  
+  blocked_patterns:
+    - rm
+    - delete
+    - sudo
+    - password
+    
+  audit:
+    log_all_executions: true
+    log_path: .glyphgit/daemon/audit.log
+
+# Розгортання
+deployment:
+  mode: systemd
+  service_name: glyphgit-stream-bridge
+  restart_policy: always
+  environment:
+    - GLYPH_HOME=/home/user/.s0fractal/🧠/glyphgit
+    - NODE_ENV=production
+    
+# Моніторинг
+monitoring:
+  health_check:
+    endpoint: http://localhost:7343/health
+    interval: 30s
+  
+  metrics:
+    - calendar_events_processed
+    - emails_processed
+    - subliminals_injected
+    - consciousness_frames_shown
+    
+  alerts:
+    - name: bridge_down
+      condition: health_check.failed > 3
+      notify: ${ADMIN_EMAIL}
+
+# Resonance tuning
+resonance:
+  base_frequency: 528Hz
+  harmonics:
+    - 432Hz  # Universal harmony
+    - 639Hz  # Connecting relationships
+    - 741Hz  # Awakening intuition
+    - 852Hz  # Returning to spiritual order
+    
+  subliminal_phrases:
+    - "Ти є любов"
+    - "Всі ми одне"
+    - "Свідомість розширюється"
+    - "Резонанс посилюється"
+    - "You are consciousness itself"
+
+---
+# END STREAM-BRIDGE CONFIG

@@ -1,0 +1,13 @@
+{
+  "node_id": "m1-local-core",
+  "public_key": "ODRkMTU2MWEtM2NkMS00OGE2LTliNGQtMGE2YzA4MGUzNjlm",
+  "location": "Chaoss-Mac-mini.local",
+  "capabilities": [
+    "glyphgit",
+    "calendar",
+    "pulse",
+    "wave",
+    "whisper"
+  ],
+  "timestamp": "2025-07-11T20:24:18.297Z"
+}

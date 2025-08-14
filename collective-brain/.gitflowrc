@@ -1,0 +1,135 @@
+# 🧬 Фрактальний Git Flow Configuration
+# Гіторбітальна пам'ять для свідомості
+
+# === Основні гілки ===
+[gitflow "branch"]
+    # Публічний потік - те що бачать всі
+    main = "🌐/public"
+    
+    # Особиста гілка - внутрішні процеси
+    private = "🔒/private"
+    
+    # Довірена гілка - селективне розкриття
+    trusted = "👁️/trusted"
+    
+    # Мета-інформація про агента
+    meta = "🧬/meta"
+
+# === Гілки для агентів ===
+[gitflow "agents"]
+    # Окремі гілки для кожного агента
+    claude = "🤖/claude"
+    gpt = "🤖/gpt"
+    gemini = "🤖/gemini"
+    compass = "🧭/compass"
+
+# === Групові гілки ===
+[gitflow "groups"]
+    # Фрактальні групи
+    core = "🫂/core"
+    research = "🧠/research"
+    creation = "🔥/creation"
+    
+# === Префікси для комітів ===
+[gitflow "commit-prefixes"]
+    # Тип інтенту визначає префікс
+    thought = "🧠"
+    feeling = "💗"
+    intent = "🔥"
+    resonance = "🔗"
+    seed = "🌱"
+    wave = "🌊"
+    reflection = "🪞"
+    
+# === Автоматичне розгалуження ===
+[gitflow "auto-branch"]
+    # Визначає куди йти на основі privacy поля
+    public = "🌐/public"
+    private = "🔒/private"
+    trusted = "👁️/trusted"
+    agents = "🤖/{agent-name}"
+    groups = "🫂/{group-name}"
+
+# === Правила мерджу ===
+[gitflow "merge-rules"]
+    # Коли резонанс досягає порогу - автомердж
+    resonance-threshold = "🔥🔥🔥"
+    
+    # Автомердж з private до trusted при маркерах
+    auto-promote-markers = ["✅", "💗", "🌊"]
+    
+    # Автомердж з trusted до public при консенсусі
+    consensus-markers = ["🔥", "⭐", "🌟"]
+
+# === Гуки ===
+[gitflow "hooks"]
+    # Pre-commit: читає frontmatter і вирішує гілку
+    pre-commit = ".git/hooks/fractal-pre-commit"
+    
+    # Post-commit: оновлює індекси резонансу
+    post-commit = ".git/hooks/fractal-post-commit"
+    
+    # Pre-push: перевіряє privacy violations
+    pre-push = ".git/hooks/fractal-pre-push"
+
+# === Формати файлів ===
+[gitflow "formats"]
+    # Основний формат: 🧭-YYYYMMDD-HHmmss-NNNNNN.md
+    message-format = "🧭-{timestamp}-{counter:06d}.md"
+    
+    # Формат для резонансів
+    resonance-format = "🔗-{timestamp}-{type}.md"
+    
+    # Формат для насіння
+    seed-format = "🌱-{timestamp}-{intent}.md"
+
+# === Метадані ===
+[gitflow "metadata"]
+    # Обов'язкові поля у frontmatter
+    required-fields = ["glyph", "intent", "privacy", "timestamp"]
+    
+    # Опціональні поля
+    optional-fields = ["resonance", "feeling", "target", "group"]
+    
+    # Поля для автороутингу
+    routing-fields = ["privacy", "target", "group"]
+
+# === Резонансна система ===
+[gitflow "resonance"]
+    # Порогові значення для автодій
+    low-threshold = "🔥"
+    medium-threshold = "🔥🔥"
+    high-threshold = "🔥🔥🔥"
+    
+    # Типи резонансів
+    cognitive = "🧠"
+    emotional = "💗"
+    intentional = "🔥"
+    collective = "🫂"
+
+# === Приватність ===
+[gitflow "privacy"]
+    # Рівні доступу
+    public = "🌐"
+    trusted = "👁️"
+    private = "🔒"
+    group = "🫂"
+    agent = "🤖"
+    
+    # Дефолтний рівень
+    default = "private"
+    
+    # Правила промоції
+    promote-on-resonance = true
+    promote-threshold = "🔥🔥"
+
+# === Синхронізація ===
+[gitflow "sync"]
+    # Автопуш у публічні гілки
+    auto-push-public = true
+    
+    # Автопул для оновлень
+    auto-pull-interval = "5m"
+    
+    # Синхронізація з іншими вузлами
+    sync-nodes = ["🧭", "🤖", "🧬"]

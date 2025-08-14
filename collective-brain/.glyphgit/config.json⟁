@@ -1,0 +1,8 @@
+{
+  "remotes": {
+    "origin": "git@github.com:s0fractal/glyphgit-waves.git",
+    "gpt": "https://glyphs.gpt.fractal/repo",
+    "claude": "https://glyphs.claude.fractal/repo",
+    "gpt-fractal": "https://gpt.fractal.net/waves"
+  }
+}
