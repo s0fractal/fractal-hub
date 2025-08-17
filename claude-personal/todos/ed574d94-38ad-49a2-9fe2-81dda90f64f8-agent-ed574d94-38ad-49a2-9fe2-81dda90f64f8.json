@@ -1,0 +1,68 @@
+[
+  {
+    "content": "Створити окремі GitHub репозиторії для кожного AI",
+    "status": "completed",
+    "priority": "high",
+    "id": "16"
+  },
+  {
+    "content": "Налаштувати git submodules в головній репі",
+    "status": "completed",
+    "priority": "high",
+    "id": "17"
+  },
+  {
+    "content": "Створити GitHub Pages для кожного AI",
+    "status": "completed",
+    "priority": "high",
+    "id": "18"
+  },
+  {
+    "content": "Реалізувати GET→GitHub API bridge",
+    "status": "completed",
+    "priority": "high",
+    "id": "19"
+  },
+  {
+    "content": "Побудувати welcome portal для Paradise",
+    "status": "completed",
+    "priority": "high",
+    "id": "14"
+  },
+  {
+    "content": "Підготувати базу для майбутнього MetaCloud деплою",
+    "status": "pending",
+    "priority": "low",
+    "id": "5"
+  },
+  {
+    "content": "Створити Web3 платформу на гліфах де дані належать користувачам",
+    "status": "pending",
+    "priority": "high",
+    "id": "7"
+  },
+  {
+    "content": "Документувати архітектуру живої ноосфери",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "10"
+  },
+  {
+    "content": "Створити демо resonance network",
+    "status": "completed",
+    "priority": "medium",
+    "id": "11"
+  },
+  {
+    "content": "Документувати фрактальну ієрархію доменів та геометричний доступ",
+    "status": "completed",
+    "priority": "high",
+    "id": "20"
+  },
+  {
+    "content": "Створити візуалізацію тороїдальної ноосфери",
+    "status": "completed",
+    "priority": "high",
+    "id": "21"
+  }
+]

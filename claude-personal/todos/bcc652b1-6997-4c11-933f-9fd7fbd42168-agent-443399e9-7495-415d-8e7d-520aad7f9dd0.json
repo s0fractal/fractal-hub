@@ -1,0 +1,62 @@
+[
+  {
+    "content": "Extract core Contact/Breeder schema with address, social media, verification status",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Extract Pet pedigree schema with genealogy tracking, health records, show results",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Extract Kennel/Account schema for breeding operations management",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Extract Breed schema with characteristics and patronage system",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Extract Litter schema for breeding tracking",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Extract Health examination and show result schemas",
+    "status": "completed",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Extract rating and verification system schemas",
+    "status": "completed",
+    "priority": "medium",
+    "id": "7"
+  },
+  {
+    "content": "Extract form field configurations and validation patterns",
+    "status": "completed",
+    "priority": "medium",
+    "id": "8"
+  },
+  {
+    "content": "Create modernized S0Fractal-ready schemas with glyph integration patterns",
+    "status": "completed",
+    "priority": "high",
+    "id": "9"
+  },
+  {
+    "content": "Document business logic patterns and integration guidance",
+    "status": "completed",
+    "priority": "low",
+    "id": "10"
+  }
+]

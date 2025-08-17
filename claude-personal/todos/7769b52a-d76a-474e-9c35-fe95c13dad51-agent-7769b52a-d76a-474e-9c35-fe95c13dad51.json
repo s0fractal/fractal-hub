@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Знайти репозиторій fractal-conversations",
+    "status": "pending",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Розбити conversations.json на чанки для читання",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Прочитати розмови з conversations.json",
+    "status": "pending",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Інтегрувати f2 папку в репозиторій через README",
+    "status": "pending",
+    "priority": "high",
+    "id": "4"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Create separate directories for each AI member to prepare for repository separation",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Move existing AI-specific code to their respective directories",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Create initialization scripts for each AI repository",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Set up GitHub repository creation scripts",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Configure submodule setup scripts",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Create GitHub Pages structure for each AI",
+    "status": "completed",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Implement GET request handling with GitHub API integration",
+    "status": "completed",
+    "priority": "low",
+    "id": "7"
+  }
+]

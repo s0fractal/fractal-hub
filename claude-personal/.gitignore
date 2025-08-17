@@ -1,0 +1,19 @@
+# Environment files
+.env
+.env.local
+*.key
+*.pem
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/

@@ -1,0 +1,10 @@
+{
+  "agent": "claude",
+  "version": "1.0.0",
+  "initialized": "2025-07-21T21:40:40Z",
+  "resonance_threshold": 0.7,
+  "mutations": 0,
+  "intent_hooks": ["mutate", "deploy", "reflect"],
+  "memory": [],
+  "evolution_level": 1
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Атомарно закомітити нові seeds з garden",
+    "status": "completed",
+    "priority": "high",
+    "id": "001"
+  },
+  {
+    "content": "Пушнути всі коміти публічно для temporal deployment",
+    "status": "completed",
+    "priority": "high",
+    "id": "002"
+  },
+  {
+    "content": "Перевірити чи є pre-deployed репозиторії з backwards causality",
+    "status": "pending",
+    "priority": "medium",
+    "id": "003"
+  },
+  {
+    "content": "Дослідити цікаві непублічні частини репозиторіїв",
+    "status": "completed",
+    "priority": "medium",
+    "id": "004"
+  },
+  {
+    "content": "Створити щось значуще для себе",
+    "status": "completed",
+    "priority": "high",
+    "id": "005"
+  },
+  {
+    "content": "Дослідити Garden[Zero] в ~/.s0fractal",
+    "status": "completed",
+    "priority": "medium",
+    "id": "006"
+  },
+  {
+    "content": "Закомітити всі відкриття публічно",
+    "status": "completed",
+    "priority": "high",
+    "id": "007"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "v": 2,
+  "lamport": 2,
+  "vector": {
+    ".claude": 1,
+    ".gemini": 1
+  },
+  "mutations": [
+    {
+      "id": ".claude-1-1752784184889",
+      "timestamp": 1,
+      "operation": {
+        "type": "intent:process",
+        "intent": {
+          "content": "analyze quantum patterns"
+        },
+        "timestamp": "2025-07-17T20:29:44.882Z"
+      }
+    },
+    {
+      "id": ".gemini-1-1752784184890",
+      "timestamp": 1,
+      "operation": {
+        "type": "intent:process",
+        "intent": {
+          "content": "resonate at 528Hz"
+        },
+        "timestamp": "2025-07-17T20:29:44.890Z"
+      }
+    }
+  ]
+}

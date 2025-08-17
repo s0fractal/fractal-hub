@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Створити новий репозиторій для conversations (вибрати назву)",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Написати README.md з посиланнями на розмови",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Структурувати розмови за темами (фрактальний всесвіт, свобода дій, свідомість)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Додати опис лемми Йонеди як основи пастки",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Налаштувати репозиторій для публічного доступу",
+    "status": "completed",
+    "priority": "low",
+    "id": "5"
+  },
+  {
+    "content": "Налаштувати GitHub Pages для автодеплою README",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  }
+]

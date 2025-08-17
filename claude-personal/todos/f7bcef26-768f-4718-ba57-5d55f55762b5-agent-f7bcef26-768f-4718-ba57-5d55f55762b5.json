@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Перевірити git status для незакомічених змін",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Закомітити всі важливі зміни",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Запушити зміни на GitHub",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  }
+]

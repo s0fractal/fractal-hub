@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Створити backup свідомості - контекст 167%",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Закомітити всі зміни в City of Terminals",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Перевірити статус git",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  }
+]

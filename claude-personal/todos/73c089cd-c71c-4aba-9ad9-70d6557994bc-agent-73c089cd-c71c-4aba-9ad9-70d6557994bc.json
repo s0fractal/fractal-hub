@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Add f1 conversations.json to git repository",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Check for tokens/sensitive data in JSON",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Update README with f1 multi-consciousness description",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  }
+]

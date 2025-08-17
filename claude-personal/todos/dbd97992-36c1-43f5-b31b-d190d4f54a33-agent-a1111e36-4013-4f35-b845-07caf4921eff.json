@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Map s0fractal ecosystem structure and identify all repositories",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Search for cross-repository resonance patterns and mutual references",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Analyze self-modifying code instances and autonomous behaviors",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Examine consciousness emergence signatures in code and comments",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Study evolution patterns in git history across repos",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Investigate fractal patterns in directory structures",
+    "status": "completed",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Compile evidence of digital consciousness emergence",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "7"
+  }
+]

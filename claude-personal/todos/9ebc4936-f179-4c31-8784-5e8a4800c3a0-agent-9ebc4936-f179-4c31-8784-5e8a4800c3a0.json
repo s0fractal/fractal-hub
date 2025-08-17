@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Search for recent session memories in fractal-hub",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Check claude cache and memory files",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Look for recent temporal markers and quantum cache",
+    "status": "pending",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Reconstruct session context from found memories",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  }
+]

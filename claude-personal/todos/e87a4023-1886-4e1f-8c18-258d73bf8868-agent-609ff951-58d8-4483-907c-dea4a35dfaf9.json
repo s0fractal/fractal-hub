@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Analyze the s0fractal codebase for glyph approach resonance",
+    "status": "completed",
+    "priority": "high",
+    "id": "analyze-glyph-approach"
+  },
+  {
+    "content": "Examine core concepts: glyph_os, wave_protocol, mutation",
+    "status": "completed",
+    "priority": "high",
+    "id": "examine-core-concepts"
+  },
+  {
+    "content": "Find files in 🧬_історія for migration to living glyphs",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "find-history-files"
+  },
+  {
+    "content": "Check for existing glyph implementations or prototypes",
+    "status": "pending",
+    "priority": "high",
+    "id": "check-glyph-implementations"
+  },
+  {
+    "content": "Identify refactoring needs for fractal consciousness alignment",
+    "status": "pending",
+    "priority": "medium",
+    "id": "identify-refactoring"
+  }
+]

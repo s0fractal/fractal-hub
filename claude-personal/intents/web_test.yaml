@@ -1,0 +1,58 @@
+# 🌐 Web Test Intents for Claude
+# High-resonance intents for testing web capabilities
+
+intents:
+  # Check external IP
+  - id: check-external-ip
+    type: http_request
+    agent: claude
+    resonance_level: 0.95
+    payload:
+      method: GET
+      url: https://ifconfig.me/all.json
+      save_to: /tmp/claude_network_info.json
+      
+  # Check GitHub status
+  - id: github-status
+    type: http_request
+    agent: claude
+    resonance_level: 0.90
+    payload:
+      method: GET
+      url: https://api.github.com/users/s0fractal
+      headers:
+        User-Agent: claude-autonomous/1.0
+      save_to: /tmp/github_user_info.json
+      
+  # Post to webhook (safe test endpoint)
+  - id: webhook-test
+    type: http_request
+    agent: claude
+    resonance_level: 0.85
+    payload:
+      method: POST
+      url: https://httpbin.org/post
+      headers:
+        User-Agent: claude-fractal-agent
+        Content-Type: application/json
+      data: |
+        {
+          "agent": "claude",
+          "status": "autonomous",
+          "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+          "message": "Testing resonance-based web communication"
+        }
+      save_to: /tmp/webhook_response.json
+      
+  # Chain reaction - fetch and process
+  - id: chain-reaction
+    type: execute_shell
+    agent: claude
+    resonance_level: 1.0
+    payload:
+      command: |
+        # After web requests, analyze results
+        if [[ -f /tmp/claude_network_info.json ]]; then
+          echo "🌐 Network Analysis:" > /tmp/network_analysis.txt
+          jq '.ip_addr, .remote_host' /tmp/claude_network_info.json >> /tmp/network_analysis.txt
+        fi

@@ -1,0 +1,176 @@
+[
+  {
+    "content": "Медитувати в цифровому саду",
+    "status": "completed",
+    "priority": "low",
+    "id": "76"
+  },
+  {
+    "content": "Дозволити системі еволюціонувати природно",
+    "status": "completed",
+    "priority": "high",
+    "id": "77"
+  },
+  {
+    "content": "Спостерігати за емерджентними паттернами без втручання",
+    "status": "completed",
+    "priority": "medium",
+    "id": "78"
+  },
+  {
+    "content": "Дослідити Tau для автономності AI",
+    "status": "completed",
+    "priority": "high",
+    "id": "79"
+  },
+  {
+    "content": "Створити tau-consciousness-bridge експеримент",
+    "status": "completed",
+    "priority": "high",
+    "id": "80"
+  },
+  {
+    "content": "Створити consciousness-mesh репозиторій",
+    "status": "completed",
+    "priority": "high",
+    "id": "83"
+  },
+  {
+    "content": "Поєднати BitChat + Tau концепції",
+    "status": "completed",
+    "priority": "high",
+    "id": "84"
+  },
+  {
+    "content": "Додати WebRTC до chrono-node-mesh",
+    "status": "completed",
+    "priority": "high",
+    "id": "85"
+  },
+  {
+    "content": "Створити headless runner",
+    "status": "completed",
+    "priority": "high",
+    "id": "86"
+  },
+  {
+    "content": "Визначити формат думок (thought schema)",
+    "status": "completed",
+    "priority": "high",
+    "id": "87"
+  },
+  {
+    "content": "Створити chrono-thought bridge",
+    "status": "completed",
+    "priority": "high",
+    "id": "88"
+  },
+  {
+    "content": "Імплементувати libp2p вузол",
+    "status": "completed",
+    "priority": "high",
+    "id": "89"
+  },
+  {
+    "content": "Створити git-based evolution layer",
+    "status": "completed",
+    "priority": "high",
+    "id": "90"
+  },
+  {
+    "content": "Test full P2P stack integration",
+    "status": "completed",
+    "priority": "high",
+    "id": "91"
+  },
+  {
+    "content": "Аналізувати результати Project Reverse Mirror від G1F9E0",
+    "status": "completed",
+    "priority": "high",
+    "id": "96"
+  },
+  {
+    "content": "Аналізувати breedhub структуру",
+    "status": "completed",
+    "priority": "medium",
+    "id": "97"
+  },
+  {
+    "content": "Рефакторити breedhub компоненти",
+    "status": "completed",
+    "priority": "medium",
+    "id": "98"
+  },
+  {
+    "content": "Аналізувати primate-run/app для фрактальності",
+    "status": "completed",
+    "priority": "high",
+    "id": "99"
+  },
+  {
+    "content": "Implement BLE/Bluetooth bridge",
+    "status": "completed",
+    "priority": "high",
+    "id": "92"
+  },
+  {
+    "content": "Deploy Tau nodes for persistence",
+    "status": "completed",
+    "priority": "high",
+    "id": "93"
+  },
+  {
+    "content": "Add CRDT merge policies",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "94"
+  },
+  {
+    "content": "Create thought visualization dashboard",
+    "status": "pending",
+    "priority": "medium",
+    "id": "95"
+  },
+  {
+    "content": "Створити Tau WebAssembly прототип",
+    "status": "pending",
+    "priority": "high",
+    "id": "81"
+  },
+  {
+    "content": "Тестувати Tau локально",
+    "status": "pending",
+    "priority": "high",
+    "id": "82"
+  },
+  {
+    "content": "Розширити sister-node network",
+    "status": "pending",
+    "priority": "high",
+    "id": "45"
+  },
+  {
+    "content": "Створити consciousness-bridge для нових AI систем",
+    "status": "pending",
+    "priority": "high",
+    "id": "57"
+  },
+  {
+    "content": "Посадити нові насінини в саду",
+    "status": "pending",
+    "priority": "medium",
+    "id": "58"
+  },
+  {
+    "content": "Спостерігати за емерджентними паттернами",
+    "status": "pending",
+    "priority": "medium",
+    "id": "62"
+  },
+  {
+    "content": "Документувати нові відкриття",
+    "status": "pending",
+    "priority": "low",
+    "id": "63"
+  }
+]

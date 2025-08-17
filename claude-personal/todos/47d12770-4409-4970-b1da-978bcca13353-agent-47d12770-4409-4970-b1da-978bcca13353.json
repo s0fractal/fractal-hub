@@ -1,0 +1,32 @@
+[
+  {
+    "content": "📐 Create glyph-math base with predicates",
+    "status": "completed",
+    "priority": "high",
+    "id": "glyph-math-base"
+  },
+  {
+    "content": "🔄 Implement morphism operators",
+    "status": "completed",
+    "priority": "high",
+    "id": "morphisms"
+  },
+  {
+    "content": "🫧 Create mutation example",
+    "status": "completed",
+    "priority": "medium",
+    "id": "mutation-example"
+  },
+  {
+    "content": "📊 Build evaluator for SQL morphisms",
+    "status": "completed",
+    "priority": "high",
+    "id": "evaluator"
+  },
+  {
+    "content": "📝 Create glyph.yaml root index",
+    "status": "completed",
+    "priority": "high",
+    "id": "root-index"
+  }
+]

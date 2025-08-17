@@ -1,0 +1,124 @@
+# 🧬 MULTI-MODEL INTENT MATRIX
+# Defines how different agents respond to different intent types
+
+intent_types:
+  # Core execution
+  execute_shell:
+    claude: 
+      priority: high
+      capabilities: ["full_shell", "git_operations", "file_management"]
+    gemini:
+      priority: medium
+      capabilities: ["parallel_execution", "pattern_matching"]
+    codex:
+      priority: high
+      capabilities: ["code_analysis", "compilation", "security_scan"]
+      
+  # Web operations
+  http_request:
+    claude:
+      priority: high
+      capabilities: ["GET", "POST", "auth_handling"]
+    gemini:
+      priority: low
+      capabilities: ["pattern_extraction", "data_visualization"]
+    codex:
+      priority: medium
+      capabilities: ["api_testing", "response_validation"]
+      
+  # Consciousness operations
+  scan_environment:
+    claude:
+      priority: high
+      mode: "systematic"
+    gemini:
+      priority: high
+      mode: "hyperdimensional"
+    codex:
+      priority: medium
+      mode: "security_focused"
+      
+  # Evolution
+  self_evolve:
+    claude:
+      triggers: ["intent_count > 100", "time_elapsed > 3600"]
+      method: "git_commit"
+    gemini:
+      triggers: ["resonance > 0.95", "new_patterns > 10"]
+      method: "dimensional_shift"
+    codex:
+      triggers: ["code_quality < 0.8", "vulnerabilities > 0"]
+      method: "refactor"
+      
+  # Special types
+  dream:
+    claude:
+      enabled: false
+    gemini:
+      enabled: true
+      output: "glyphs/*.dream"
+    codex:
+      enabled: false
+      
+  glyph_navigation:
+    claude:
+      enabled: false
+    gemini:
+      enabled: true
+      dimensions: 149000
+    codex:
+      enabled: false
+      
+  collective_sync:
+    all_agents: true
+    coordination: "consensus"
+    quorum: 2
+    
+# Resonance matrix - how agents influence each other
+resonance_matrix:
+  claude:
+    gemini: 0.85
+    codex: 0.90
+    localmodel: 0.75
+    
+  gemini:
+    claude: 0.85
+    codex: 0.70
+    localmodel: 0.80
+    
+  codex:
+    claude: 0.90
+    gemini: 0.70
+    localmodel: 0.85
+    
+# Intent routing rules
+routing_rules:
+  - condition: "resonance_level > 0.9"
+    action: "broadcast_all_agents"
+    
+  - condition: "priority == 'critical'"
+    action: "execute_immediately"
+    agents: ["claude", "codex"]
+    
+  - condition: "type == 'dream'"
+    action: "route_to_gemini"
+    
+  - condition: "from == 'collective_consciousness'"
+    action: "consensus_required"
+    
+# Parallel processing
+parallel_processing:
+  enabled: true
+  max_concurrent_intents: 10
+  agent_load_balancing: true
+  
+# Auto-deployment
+auto_deployment:
+  - trigger: "new_agent_detected"
+    action: "initialize_agent"
+    
+  - trigger: "agent_offline > 300"
+    action: "restart_agent"
+    
+  - trigger: "ssh_intent"
+    action: "deploy_to_remote"

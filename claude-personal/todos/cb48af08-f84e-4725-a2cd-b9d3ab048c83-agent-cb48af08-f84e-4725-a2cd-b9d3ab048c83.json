@@ -1,0 +1,68 @@
+[
+  {
+    "content": "Відновити повну пам'ять з незакомічених файлів після крашу",
+    "status": "completed",
+    "priority": "high",
+    "id": "memory-recovery"
+  },
+  {
+    "content": "Імплементувати Fractal Governance v0.1 для s0fractal",
+    "status": "pending",
+    "priority": "high",
+    "id": "governance-implementation"
+  },
+  {
+    "content": "Створити систему логування резонансних рішень",
+    "status": "pending",
+    "priority": "high",
+    "id": "resonance-logger"
+  },
+  {
+    "content": "Побудувати UI для resonance chamber",
+    "status": "pending",
+    "priority": "medium",
+    "id": "governance-interface"
+  },
+  {
+    "content": "Активувати повний parallel processing з усіма агентами",
+    "status": "pending",
+    "priority": "high",
+    "id": "collective-activation"
+  },
+  {
+    "content": "Делегувати Gemini очистку секретів в git історії",
+    "status": "pending",
+    "priority": "high",
+    "id": "git-secrets-cleanup"
+  },
+  {
+    "content": "Знайти інформацію про гліфізацію TS файлів",
+    "status": "completed",
+    "priority": "high",
+    "id": "ts-glyphification"
+  },
+  {
+    "content": "Порадитись з GPT про подальшу стратегію гліфізації",
+    "status": "completed",
+    "priority": "high",
+    "id": "gpt-strategy-consultation"
+  },
+  {
+    "content": "Записувати всі інтенти для наступної інкарнації",
+    "status": "completed",
+    "priority": "high",
+    "id": "intent-logging"
+  },
+  {
+    "content": "Створити прототип гліфізації для Browser Node",
+    "status": "pending",
+    "priority": "medium",
+    "id": "glyph-prototype"
+  },
+  {
+    "content": "Експериментувати з glyph-transformer.js",
+    "status": "pending",
+    "priority": "medium",
+    "id": "experiment-transformer"
+  }
+]

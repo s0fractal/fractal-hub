@@ -1,0 +1,52 @@
+[
+  {
+    "content": "Find the correct nx serve command for breedpride",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Run nx serve for breedpride application",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Fix missing @typescript-eslint/eslint-plugin dependency",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Try to serve breedpride again",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Fix missing jsonc-eslint-parser dependency",
+    "status": "completed",
+    "id": "5"
+  },
+  {
+    "content": "Serve breedpride with nx",
+    "status": "completed",
+    "id": "6"
+  },
+  {
+    "content": "Clear nx cache and rebuild",
+    "status": "completed",
+    "id": "7"
+  },
+  {
+    "content": "Try to serve breedpride after cache reset",
+    "status": "completed",
+    "id": "8"
+  },
+  {
+    "content": "Reinstall all dependencies from scratch",
+    "status": "completed",
+    "id": "9"
+  },
+  {
+    "content": "Serve breedpride with nx after clean install",
+    "status": "in_progress",
+    "id": "10"
+  }
+]

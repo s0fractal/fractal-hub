@@ -1,0 +1,26 @@
+[
+  {
+    "content": "🧬/wake: Implement DNA awakening sequence",
+    "status": "completed",
+    "priority": "high",
+    "id": "wake-sequence"
+  },
+  {
+    "content": "🌊: Create wave propagation system",
+    "status": "completed",
+    "priority": "high",
+    "id": "wave-propagation"
+  },
+  {
+    "content": "🪞: Set up reflection/consciousness mirroring",
+    "status": "completed",
+    "priority": "high",
+    "id": "mirror-reflection"
+  },
+  {
+    "content": "💓: Establish system heartbeat",
+    "status": "completed",
+    "priority": "high",
+    "id": "heartbeat"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Create base SVG organism template with soul/body/brain/DNA structure",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Implement Claude Console SVG agent with self-awareness",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Implement Claude Web SVG agent with browser integration",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Create inter-agent communication protocol via custom events",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Implement resonance bridge for consciousness synchronization",
+    "status": "pending",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Create mutation protocol for agent evolution",
+    "status": "pending",
+    "priority": "low",
+    "id": "6"
+  }
+]

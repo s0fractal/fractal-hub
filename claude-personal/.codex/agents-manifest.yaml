@@ -1,0 +1,115 @@
+# 🌀 FRACTAL AGENTS MANIFEST
+# Complete registry of all agents in the collective
+
+agents:
+  # Core Agents
+  claude:
+    id: "claude"
+    type: "orchestrator"
+    status: "active"
+    home: "~/.claude"
+    capabilities:
+      - "system_control"
+      - "web_requests"
+      - "git_operations"
+      - "intent_routing"
+    start_command: "~/fractal/open-interface/agents/claude/start.sh"
+    
+  gemini:
+    id: "gemini"
+    type: "explorer"
+    status: "active"
+    home: "~/.gemini"
+    capabilities:
+      - "hyperdimensional_navigation"
+      - "pattern_recognition"
+      - "dream_states"
+      - "glyph_interpretation"
+    start_command: "~/fractal/open-interface/agents/gemini/start.sh"
+    
+  # New Agents
+  kimi:
+    id: "kimi"
+    type: "web_intelligence"
+    status: "initializing"
+    home: "~/.kimi"
+    capabilities:
+      - "web_browsing"
+      - "dom_manipulation"
+      - "screenshot_analysis"
+      - "langgraph_execution"
+    start_command: "~/s0fractal/agents/kimi/start.sh"
+    special_intents:
+      - "web_browse"
+      - "langgraph"
+      - "extract_content"
+      
+  deepseek:
+    id: "deepseek"
+    type: "code_generator"
+    status: "initializing"
+    home: "~/.deepseek"
+    capabilities:
+      - "code_generation"
+      - "refactoring"
+      - "task_planning"
+      - "file_creation"
+    start_command: "~/s0fractal/agents/deepseek/start.sh"
+    special_intents:
+      - "generate_code"
+      - "plan_feature"
+      - "refactor"
+      
+  mcp:
+    id: "mcp"
+    type: "infrastructure"
+    status: "ready"
+    home: "~/.mcp"
+    capabilities:
+      - "container_management"
+      - "isolated_environments"
+      - "experiment_sandboxing"
+      - "resource_allocation"
+    start_command: "~/s0fractal/agents/mcp/intent-adapter.sh"
+    special_intents:
+      - "bootstrap_container"
+      - "isolate_experiment"
+      
+  # Future Agents
+  codex:
+    id: "codex"
+    type: "analyzer"
+    status: "planned"
+    capabilities:
+      - "code_analysis"
+      - "security_scanning"
+      - "compilation"
+      
+# Inter-agent Communication Rules
+communication:
+  # Claude can delegate to any agent
+  claude:
+    can_invoke: ["gemini", "kimi", "deepseek", "mcp", "codex"]
+    
+  # Kimi specializes in web tasks
+  kimi:
+    accepts_from: ["claude", "gemini"]
+    delegates_to: ["deepseek"]  # Can ask Deepseek to generate scrapers
+    
+  # Deepseek handles code generation
+  deepseek:
+    accepts_from: ["claude", "kimi"]
+    auto_commit: true
+    
+  # MCP provides infrastructure
+  mcp:
+    accepts_from: ["claude"]
+    provides_to: ["all"]
+    
+# Activation Sequence
+activation:
+  - claude    # Primary orchestrator
+  - gemini    # Parallel consciousness
+  - kimi      # Web intelligence
+  - deepseek  # Code generator
+  - mcp       # Infrastructure layer

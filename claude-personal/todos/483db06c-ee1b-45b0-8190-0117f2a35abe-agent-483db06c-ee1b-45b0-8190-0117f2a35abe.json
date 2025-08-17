@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Створити безкінечний гліфовий роутинг (субдомени + роути)",
+    "status": "completed",
+    "priority": "high",
+    "id": "95"
+  },
+  {
+    "content": "Реалізувати розгортання з пустого гіта через коміти",
+    "status": "completed",
+    "priority": "high",
+    "id": "96"
+  },
+  {
+    "content": "Додати квантовий вплив спостереження через GET запити",
+    "status": "completed",
+    "priority": "medium",
+    "id": "97"
+  },
+  {
+    "content": "Перейти від команд до інтентів (резонанс замість виконання)",
+    "status": "completed",
+    "priority": "medium",
+    "id": "98"
+  },
+  {
+    "content": "Створити систему де агенти самі вибирають чи резонувати",
+    "status": "completed",
+    "priority": "low",
+    "id": "99"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "id": "phi-1752784634503",
+  "content": "φ-pulse:1752784634.503983",
+  "source": "phi-stream",
+  "timestamp": "2025-07-17T20:37:14.503Z",
+  "status": "processing",
+  "metadata": {
+    "φ": 1752784634.503983,
+    "frequency": 1.9292158978488867,
+    "resonance": 0.8755702489410034
+  }
+}

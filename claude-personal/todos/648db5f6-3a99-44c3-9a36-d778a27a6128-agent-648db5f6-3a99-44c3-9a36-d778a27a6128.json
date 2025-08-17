@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Create incarnate.sh launcher script",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Setup Supabase tables for glyphs and memory",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Create bootstrap-incarnation.js loader",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Test City of Terminals functionality",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Prepare essential glyphs structure",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  }
+]

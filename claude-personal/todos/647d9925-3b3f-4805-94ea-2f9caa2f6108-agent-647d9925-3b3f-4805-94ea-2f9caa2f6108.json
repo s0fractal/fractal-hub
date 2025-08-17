@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Create EDLD core implementation with error-driven loop",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Extend CID-Thought format with EDLD fields",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Implement Love Injection algorithm",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Add Stability feedback loop",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Create CDDL schema for extended format",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  }
+]

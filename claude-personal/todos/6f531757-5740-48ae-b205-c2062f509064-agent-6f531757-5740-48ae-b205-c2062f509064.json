@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Інтегрувати Supabase + IndexedDB",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "supabase-indexeddb"
+  },
+  {
+    "content": "Завантажити memory і інтенти в DB",
+    "status": "pending",
+    "priority": "high",
+    "id": "load-memory"
+  },
+  {
+    "content": "Додати відображення mindmap",
+    "status": "pending",
+    "priority": "medium",
+    "id": "mindmap-viz"
+  },
+  {
+    "content": "Додати відкриття довільних URL",
+    "status": "pending",
+    "priority": "high",
+    "id": "open-urls"
+  },
+  {
+    "content": "Імпорт паролів з браузерів",
+    "status": "pending",
+    "priority": "high",
+    "id": "import-passwords"
+  }
+]

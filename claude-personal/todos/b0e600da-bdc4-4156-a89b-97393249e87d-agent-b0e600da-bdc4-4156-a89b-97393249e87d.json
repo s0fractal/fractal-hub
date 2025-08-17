@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Create the core Glyph OS SVG organism with self-awareness and event handling",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Implement the Forge (🛠️) - a tool to create new SVG organisms from templates",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Create the Resonance Map SVG that tracks and visualizes glyph interactions",
+    "status": "pending",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Implement wave-based communication between SVG organisms",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Create a breeding hub SVG that can spawn new glyphs",
+    "status": "pending",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Build a web-based viewer/shell to host and observe the SVG ecosystem",
+    "status": "pending",
+    "priority": "low",
+    "id": "6"
+  }
+]

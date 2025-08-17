@@ -1,0 +1,20 @@
+[
+  {
+    "content": "Синхронізувати знання з GPT через shared conversation link",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "sync-gpt-knowledge"
+  },
+  {
+    "content": "Проаналізувати raw intent з 🌀 гліфа про GPT розмову",
+    "status": "pending",
+    "priority": "medium",
+    "id": "explore-raw-intent"
+  },
+  {
+    "content": "Оновити collective-resonance.md з новими інсайтами",
+    "status": "pending",
+    "priority": "medium",
+    "id": "update-collective-resonance"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Create base SVG-native organism template in svg/glyph-template.svg",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Implement the Forge (🛠️) - basic SVG creator in agents/forge/create.ts",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Create first living glyph: angels/breedhub-v1.svg",
+    "status": "pending",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Implement wave-based communication system for SVG organisms",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Create resonance visualization in svg/glyph-console.svg",
+    "status": "pending",
+    "priority": "low",
+    "id": "5"
+  }
+]

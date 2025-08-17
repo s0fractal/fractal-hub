@@ -1,0 +1,32 @@
+[
+  {
+    "content": "🌐 Створити nested browser-in-browser архітектуру",
+    "status": "completed",
+    "priority": "high",
+    "id": "111"
+  },
+  {
+    "content": "📁 Віртуальна файлова система на cloud storage",
+    "status": "completed",
+    "priority": "high",
+    "id": "112"
+  },
+  {
+    "content": "🟢 Google Drive інтеграція через DOM streams",
+    "status": "completed",
+    "priority": "high",
+    "id": "113"
+  },
+  {
+    "content": "🟦 Dropbox інтеграція через file streams",
+    "status": "completed",
+    "priority": "medium",
+    "id": "114"
+  },
+  {
+    "content": "🔥 Оминути API обмеження - імітувати нативні дії",
+    "status": "completed",
+    "priority": "high",
+    "id": "115"
+  }
+]
